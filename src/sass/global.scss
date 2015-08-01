@@ -1,129 +1,15 @@
 * {
 	outline: none !important;
-	// border: 1px solid hotpink;
 }
 
-body {
-	// background-color: $primary-color;
-	color: $color-text;
-}
+.red-pattern {
+	background-image: url(../images/bg_footer.png);
 
-header {
-	padding-top: 45px;
-
-	.logo {
-		margin: 0 auto;
-		display: block;
-	}
-}
-
-main {
-	position: relative;
-}
-
-@media(min-width: $medium-screen-up) {
-	.container {
-		width: 85%;
-	}
-}
-
-.filter.btn, .logout.btn {
-	padding: 0 15px;
-
-	$height: 1.5rem; 
-	height: $height;
-	line-height: $height;
-	font-size: ($height / 2);
-
-	color: $primary-color;
-	background-color: $color-white;
-
-	@extend .z-depth-0;
-
-	&:hover {
-		color: $primary-color;
-		background-color: lighten($primary-color, 40%);
+	&.thin {
+		height: 10px;
 	}
 
-	&.active {
-		color: $color-white;
-		background-color: $primary-color;
-		@extend .z-depth-0;
+	&.thick {
+		height: 60px;
 	}
-
-	&.disabled {
-		background-color: $color-white !important;
-	}
-}
-
-.category-wrapper {
-	border-top: 1px solid #ccc;
-
-	padding-top: 15px;
-	padding-bottom: 15px;
-}
-
-.card .card-image img {
-	display: block;
-}
-
-.cards.category {
-	.card-content {
-		color: color('grey', 'darken-2');
-	}
-}
-
-.card-image {
-	.valign-wrapper {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		text-align: center;
-
-		transition: all 0.5s ease;
-		background-color: rgba(0,0,0,0);
-
-		&:hover {
-			background-color: rgba(0,0,0,0.5);
-
-			.material-icons {
-				opacity: 0.8;
-			}
-		}
-	}
-	.material-icons {
-		width: 100%;
-		color: $color-white;
-		opacity: 0;
-
-		transition: all 0.5s ease;
-	}
-}
-.card .card-title {
-	background-color: rgba(30,136,229,0.9);
-	width: 100%;
-	font-size: 1.25rem;
-}
-
-.year {
-	h5 {
-		margin-top: 30px;
-	}
-}
-
-.logout {
-	float: right;
-	margin-top: 6px;
-}
-
-.breadcrumbs {
-	margin-top: 10px;
-	float: left;
-}
-
-.mejs-controls .mejs-time-rail .mejs-time-loaded {
-	background: $primary-color;
-	background: linear-gradient($primary-color, darken($primary-color, 15%));
 }

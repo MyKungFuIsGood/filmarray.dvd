@@ -43,7 +43,7 @@ var ChapterList = React.createClass({
 			);
 		});
 
-		React.render(<VideoWrapper path={"media/" + chapterNodes[0].props.file} />, $('footer').get(0));
+		React.render(<VideoWrapper path={"media/" + chapterNodes[0].props.file} />, $('.content').get(0));
 		mediaelement();
 
 		return (
@@ -56,13 +56,13 @@ var ChapterList = React.createClass({
 
 var Chapter = React.createClass({
 	handleClick: function () {
-		React.render(<VideoWrapper path={"media/" + this.props.file} />, $('footer').get(0));
+		React.render(<VideoWrapper path={"media/" + this.props.file} />, $('.content').get(0));
 		return mediaelement();
 	},
 	render: function () {
 		return ( 
 			<li id={this.props.id} className="chapter">
-				<a href="#" className="navitem" data-video={this.props.file} onClick={this.handleClick}>
+				<a href="#" className="navitem" onClick={this.handleClick}>
 					{this.props.name}
 				</a>
 			</li>
@@ -70,4 +70,4 @@ var Chapter = React.createClass({
 	}
 });
 
-React.render(<ChapterList/>, $('main').get(0));
+React.render(<ChapterList/>, $('.sidebar').get(0));
